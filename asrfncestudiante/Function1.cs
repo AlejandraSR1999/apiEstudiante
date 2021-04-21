@@ -12,8 +12,8 @@ namespace asrfncestudiante
     {
         [FunctionName("Function1")]
         public static async Task RunAsync(
-            [ServiceBusTrigger("colaexamen", Connection = "MyConn")] string myQueueItem,
-            [CosmosDB(databaseName: "dbtelemetria", collectionName: "datos", ConnectionStringSetting = "strCosmos")] IAsyncCollector<object> datos,
+            [ServiceBusTrigger("asrcolaexamen", Connection = "MyConn")] string myQueueItem,
+            [CosmosDB(databaseName: "dbestudiante", collectionName: "datos", ConnectionStringSetting = "strCosmos")] IAsyncCollector<object> datos,
             ILogger log)
         {
             try
